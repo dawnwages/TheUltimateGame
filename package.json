@@ -1,7 +1,7 @@
 {
-  "name": "sequelize-library-spa",
+  "name": "TheUltimateGame",
   "version": "1.0.0",
-  "description": "Single Page Appliction of the Sequelize Library App",
+  "description": "As it's name suggests, this is the ultimate JavaScript RPG: A quest for love, for loyalty, for redemption.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,10 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "latest",
     "express": "latest",
+    "express-handlebars": "latest",
+    "express-session": "^1.15.6",
     "mysql2": "latest",
-    "sequelize": "latest",
-    "express-handlebars": "latest"
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "latest"
   }
 }
