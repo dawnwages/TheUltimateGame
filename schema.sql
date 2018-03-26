@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS `sequelize_library`;
-CREATE DATABASE `sequelize_library`;
+DROP DATABASE IF EXISTS `ultimategame_db`;
+CREATE DATABASE `ultimategame_db`;

@@ -1,40 +1,31 @@
-// *********************************************************************************
-// Server.js - This file is the initial starting point for the Node/Express server.
-// *********************************************************************************
+// Requiring necessary npm packages
+var express = require("express");
+var bodyParser = require("body-parser");
+var session = require("express-session");
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
 
-// Dependencies
-// =============================================================
-const express = require("express");
-const bodyParser = require("body-parser");
-const bars = require("express-handlebars");
+// Setting up port and requiring models for syncing
+var PORT = process.env.PORT || 8080;
+var db = require("./models");
 
-// Sets up the Express App
-// =============================================================
-const app = express();
-
-app.engine('hbs', bars({defaultLayout: 'main', extname: 'hbs'}));
-app.set('view engine','hbs');
-
-// Sets up the Express app to handle data parsing
-
-// parse application/x-www-form-urlencoded
+// Creating express app and configuring middleware needed for authentication
+var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-// parse application/json
 app.use(bodyParser.json());
-
-// Static directory
 app.use(express.static("public"));
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
-// Routes
-// =============================================================
-const apiController = require("./controllers/api");
-const htmlController = require("./controllers/html");
+// Controllers
+require("./controllers/api")(app);
+require("./controllers/html")(app);
 
-// Set up the controllers with our express app
-apiController(app);
-htmlController(app);
-
-// Starts the server to begin listening
-// =============================================================
-const PORT = process.env.PORT || process.argv[2] || 8080;
-app.listen(PORT, () =>  console.log("App listening on PORT " + PORT));
+// Syncing our database and logging a message to the user upon success
+db.sequelize.sync().then(function () {
+    app.listen(PORT, function () {
+        console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+    });
+});
