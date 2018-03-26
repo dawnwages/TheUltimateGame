@@ -3,5 +3,6 @@ $(document).ready(function() {
   // and updates the HTML on the page
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
+    console.log("This user is logged in with ID: " + data.id);
   });
 });
