@@ -62,7 +62,8 @@ module.exports = function (app) {
     }
   });
 
-  app.get("/api/character/:id", function (req, res) {
+  //returns all characters by passing a user's id
+  app.get("/api/character_of_user/:id", function (req, res) {
     db.Character.findAll({
       where: {
         UserId: req.params.id
@@ -76,6 +77,37 @@ module.exports = function (app) {
     });
   });
 
+  //retrieves character info by id
+  app.get("/api/character/:id", function (req, res) {
+    db.Character.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function (results) {
+      if (results.length === 0) {
+        res.json(null);
+      } else {
+        res.json(results);
+      }
+    });
+  });
+
+  //retrieves pets of user by id
+  app.get("/api/pets_of_user/:id", function (req, res) {
+    db.Pet.findAll({
+      where: {
+        CharacterId: req.params.id
+      }
+    }).then(function (results) {
+      if (results.length === 0) {
+        res.json(null);
+      } else {
+        res.json(results);
+      }
+    });
+  });
+
+  //creates character
   app.post("/api/character", function (req, res) {
     db.Character.create({
       char_name: req.body.char_name,
@@ -92,6 +124,7 @@ module.exports = function (app) {
     });
   })
 
+  //creates pet
   app.post("/api/pet", function (req, res) {
     db.Pet.create({
       pet_name: req.body.pet_name,
@@ -102,6 +135,70 @@ module.exports = function (app) {
       console.log(err);
       res.json(err);
     });
+  })
+
+  //updates character's coins
+  app.put("/api/character/coins", function (req, res) {
+    db.Character.update({
+      coins: req.body.coins
+    },{
+        where: {
+          id: req.body.id
+        }
+      }).then(function (results) {
+      res.json(results);
+    }).catch(function (err) {
+      console.log(err);
+      res.json(err);
+    });
+  })
+
+  //updates character's hp
+  app.put("/api/character/hp", function (req, res) {
+    db.Character.update({
+      hp: req.body.hp
+    }, {
+        where: {
+          id: req.body.id
+        }
+      }).then(function (results) {
+        res.json(results);
+      }).catch(function (err) {
+        console.log(err);
+        res.json(err);
+      });
+  })
+
+  //updates character's attack
+  app.put("/api/character/attack", function (req, res) {
+    db.Character.update({
+      attack: req.body.attack
+    }, {
+        where: {
+          id: req.body.id
+        }
+      }).then(function (results) {
+        res.json(results);
+      }).catch(function (err) {
+        console.log(err);
+        res.json(err);
+      });
+  })
+
+  //updates character's level complete value
+  app.put("/api/character/lvl_comp", function (req, res) {
+    db.Character.update({
+      lvl_comp: req.body.lvl_comp
+    }, {
+        where: {
+          id: req.body.id
+        }
+      }).then(function (results) {
+        res.json(results);
+      }).catch(function (err) {
+        console.log(err);
+        res.json(err);
+      });
   })
 
 };
