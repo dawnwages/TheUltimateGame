@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(".member-name").text(data.email);
     $("#user-id").attr("data", data.id);
     var id = data.id;
-    $.get("/api/character/" + id)
+    $.get("/api/character_of_user/" + id)
       .then(function (response) {
         if (!response) {
           console.log("No character");
