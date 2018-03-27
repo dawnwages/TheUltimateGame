@@ -10,8 +10,8 @@ var connection = mysql.createConnection({
   port: 3306,
   host: "localhost",
   user: "root",
-  password: "1234",
-  database: "chirpy"
+  password: "DevDawn4$",
+  database: "ultimategame_db"
 });
 
 // Connect to the database

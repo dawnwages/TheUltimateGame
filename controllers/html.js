@@ -28,4 +28,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
+
+  //Dawn - putting in the index.html file for the user to be able to play.
+  //Make sure we integrate with the if the user is logged in authentication functionality
+  app.get("/play",  function(req, res) {
+    res.readFile(path.join(__dirname, "../public/play.html"));
+  });
+
 };
