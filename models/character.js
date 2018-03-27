@@ -2,13 +2,33 @@
 module.exports = function (sequelize, DataTypes) {
     var Character = sequelize.define("Character", {
 
-        name: {
+        char_name: {
             type: DataTypes.STRING,
             allowNull: false,
             defaultValue: "Jimbo", //this needs to be removed in the real version; just for proof of concept
             validate: {
                 len: [1, 255]
             }
+        },
+        hp: {
+            type: DataTypes.INTEGER,
+            defaultValue: 100,
+            allowNull: false
+        },
+        attack: {
+            type: DataTypes.INTEGER,
+            defaultValue: 100,
+            allowNull: false
+        },
+        coins: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0,
+            allowNull: false
+        },
+        lvl_comp: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0,
+            allowNull: false
         }
     });
 
@@ -16,6 +36,14 @@ module.exports = function (sequelize, DataTypes) {
         Character.belongsTo(models.User, {
             foreignKey: {
                 allowNull: false
+            }
+        });
+    };
+
+    Character.associate = function (models) {
+        Character.hasMany(models.Pet, {
+            foreignKey: {
+                allowNull: true
             }
         });
     };
