@@ -1,18 +1,54 @@
-window.onload = function() {
-	let game = $('<div>')
-					.height(600)
-					.css("background-image", "url(images/background.png)")
-					.attr("class", "playgames");
-
-	let randoNumber = $('<section>')
-					.attr("id","random-number")
-	
-	$("#crystalgame").append(game);
-
-};
-
-
 $(document).ready(function(){
+
+	function genGame(){
+		
+		let randoNumber = $('<section>')
+			.attr("id","random-number")
+			.attr("class", "number col-md-6")
+			.append("<div class='panel-heading'><h3> Crystal Points </h3></div><div class='panel-body'><p>00</p></div>");
+		
+		let userGuess = $('<section>')
+			.attr("id", "user-number")
+			.attr("class","number col-md-6")
+			.append("<div class='panel-heading'><h3> Your Points </h3></div><div class='panel-body'><p>00</p></div>");
+	
+		let crystalOne = $('<button>')
+			.attr("id","crystal-one")
+			.attr("class","crystal col-md-2 thumbnail")
+			.append("<div class='panel-body'> <img id='crystal-img-one' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-one' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+	
+		let crystalTwo = $('<button>')
+			.attr("id","crystal-two")
+			.attr("class","crystal col-md-2 thumbnail")
+			.append("<div class='panel-body'> <img id='crystal-img-two' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-two' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+	
+		let crystalThree = $('<button>')
+			.attr("id","crystal-three")
+			.attr("class","crystal col-md-2 thumbnail")
+			.append("<div class='panel-body'> <img id='crystal-img-three' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-three' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+	
+		let crystalFour = $('<button>')
+			.attr("id","crystal-four")
+			.attr("class","crystal col-md-2 thumbnail")
+			.append("<div class='panel-body'> <img id='crystal-img-four' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-four' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+	
+	
+	
+		let game = $('<div>')
+						.height(600)
+						.css("background-image", "url(images/background.png)")
+						.attr("class", "playgames")
+						.append(randoNumber)
+						.append(crystalOne)
+						.append(crystalTwo)
+						.append(userGuess)
+						.append(crystalThree)
+						.append(crystalFour);
+	
+		$("#crystalgame").append(game);
+						
+	
+	};
 
 	var randoNumber;
 	var userNumber;
@@ -121,8 +157,6 @@ $(document).ready(function(){
 	//changeCrystalImg();
 
 	//no random value can be more than a 20 of the upper limit because that makes the game more fun
-	//i feel like this is a bad way to assign values for the four crystals because I want one function that will allow me to add the value to any of the buttons. 
-	//should it be an array? in a for loop??? 
 	function assignCrystals(){
 		changeCrystalImg();
 		randoCrystalOne = Math.floor((Math.random()*(upperLimit/5)) + 1);
@@ -189,19 +223,21 @@ $(document).ready(function(){
 		randoCrystalNames = [];
 		randoCrystalImgs = [];
 		randoCrystalLinks = [];
-		console.log(userNumber)
-		$("#random-number .panel-body, #user-number .panel-body").empty();
+		console.log(userNumber);
+		$("#random-number .panel-body, #user-number .panel-body, #crystalgame").empty();
 		
+		genGame();
 		randoGen();
 		assignCrystals();
 		changeCrystalImg();
 		console.log(randoCrystalNames);
 	};
 
+	
 	startGame();
 
 	//buttons
-	$(".crystal").on("click", addCrystal);
+	$(document).on("click", ".crystal", addCrystal);
 
 
 }); //end of document.ready 
