@@ -30,19 +30,19 @@ function startTrivia() {
   qArray = [{
     question: "In CSS, what color does this hex code represent: #000000?",
     answers: ["White", "Red", "Blue", "Black"],
-    correctanswer: 4
+    correctanswer: 3
   }, {
     question: "What software must you master to become a full stack developer(MERN)?",
     answers: ["MySql, Excess, Rascal, Napster", "Mongo, Express, React, Node", "Mongrol, Ex-lax, Nostril", "Monster, Expedia, Romel, Nerd"],
-    correctanswer: 2
+    correctanswer: 1
   }, {
     question: "To submit data to github in terminal what command must you run?",
     answers: ["git add", "git out", "git push", "git commit"],
-    correctanswer: 3
+    correctanswer: 2
   }, {
     question: "What do the letters in html stand for?",
     answers: ["hypertext markup language", "hard type manipulation lettering", "higher test mocha listener", "hanging top modified language"],
-    correctanswer: 3
+    correctanswer: 0
   }]
 
   right = 0;
