@@ -29,6 +29,25 @@ module.exports = function(app) {
   });
 
 
+  app.get("/lvl/:id", function (req, res) {
+    switch (req.params.id) {
+      case "1":
+        res.sendFile(path.join(__dirname, "../public/01game_crystal.html"));
+        break;
+      case "2":
+        res.sendFile(path.join(__dirname, "../public/02game_trivia.html"));
+        break;
+      case "3":
+        res.sendFile(path.join(__dirname, "../public/03game_hangman.html"));
+        break;
+      case "4":
+        res.sendFile(path.join(__dirname, "../public/bossfight.html"));
+        break;
+      default:
+        res.sendFile(path.join(__dirname, "../public/play.html"));
+    }
+  });
+
   //Dawn - putting in the index.html file for the user to be able to play.
   //Make sure we integrate with the if the user is logged in authentication functionality
   app.get("/play",  function(req, res) {
