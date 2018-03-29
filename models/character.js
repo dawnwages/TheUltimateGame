@@ -29,6 +29,10 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             defaultValue: 0,
             allowNull: false
+        },
+        sprite: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     });
 
