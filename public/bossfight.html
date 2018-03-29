@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boss Fight</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" id="banner">
+            <h1 class="text-center">Classic Boss Battle!</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-6">
+                <h2>Boss Placeholder</h2>
+                <div>
+                    <img src="" class="img-responsive" id="boss-img">
+                </div>
+                <div>HP: 
+                    <span id="boss-hp"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-1">
+                <h2>User Placeholder</h2>
+                <div>
+                    <img src="" class="img-responsive" id="user-img">
+                </div>
+                <div>HP:
+                    <span id="user-hp"></span>
+                    <br/><br/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="buttons col-md-6 col-md-offset-1">
+            <button class="btn btn-default" id="attack">
+                <span class="glyphicon glyphicon-flash"></span> Attack</button>
+            <button class="btn btn-default" id="potion">
+                <span class="glyphicon glyphicon-baby-formula"></span> Potion <span class="badge" id="user-potions"></span></button>
+            <button class="btn btn-default" id="special">
+                <span class="glyphicon glyphicon-star-empty"></span> Special ability</button>
+                </div>
+        </div>
+        <div class="page-header">
+            <h2>
+                <span class="glyphicon glyphicon-menu-hamburger"></span>Battle Results</h2>
+        </div>
+        <div id="battle-results"></div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/games/bossfight.js"></script>
+</body>
+
+</html>
