@@ -1,21 +1,86 @@
 <!doctype html>
+
 <head>
     <title>The Ultimate Game</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link href="stylesheets/style.css" rel="stylesheet">
-      <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="../stylesheets/game-style.css" rel="stylesheet">
+    <link href="../stylesheets/style.css" rel="stylesheet">
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <style>
+    <!-- <style>
         canvas {
             margin: 0 auto;
+            background-image: url(images/pixelated_bg1.gif);
+            height: 600px;
+            width: 960px;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-    </style>
+    </style> -->
 </head>
+
 <body>
-        <nav class="navbar navbar-default">
+    <nav class="navBG" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <div class="mainTitle">
+                    <h1>THE ULTIMATE GAME</h1>
+                </div>
+            </div>
+            <header>
+                <ul>
+                    <li>
+                        <a href="/04game_fight.html">Level Four</a>
+                    </li>
+                    <li>
+                        <a href="/03game_hangman.html">Level Three</a>
+                    </li>
+                    <li>
+                        <a class="active" href="02game_trivia.html">Level Two</a>
+                    </li>
+                    <li>
+                        <a href="/01game_crystal.html">Level One</a>
+                    </li>
+                    <li>
+                        <a href="/play.html">Start Game</a>
+                    </li>
+                </ul>
+            </header>
+    </nav>
+
+    <div class="container-fluid">
+            <div class="row">
+                <h1 class="header">Coding Trivia Game</h1>
+            </div>
+            <div class="row-header">
+                <br>
+                <div id="time"></div>
+                <br>
+                <div id="questions"></div>
+                <button class="button" id="answer0" value=0></button>
+                <br>
+                <button class="button" id="answer1" value=1></button>
+                <br>
+                <button class="button" id="answer2" value=2></button>
+                <br>
+                <button class="button" id="answer3" value=3></button>
+                <br>
+                <div id="result"></div>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+
+    <div class="container">
+            <div class="bgTest" style="background-image: url(../images/pixelated_bg1.gif);">test</div>
+    </div>
+    
+    <!-- <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <ul>
@@ -28,33 +93,9 @@
                     </div>
                 </div>
             </nav>
-    <div>INSERT TRIVIA GAME HERE</div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <h1 class="header">Coding Trivia Game</h1>
-        </div>
-        <div class="row-header">
-            <br>
-            <div id="time"></div>
-            <br>
-            <div id="questions"></div>
-            <button class="button" id="answer0" value=0></button>
-            <br>
-            <button class="button" id="answer1" value=1></button>
-            <br>
-            <button class="button" id="answer2" value=2></button>
-            <br>
-            <button class="button" id="answer3" value=3></button>
-            <br>
-            <div id="result"></div>
-        </div>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <script type="text/javascript" src="js/games/trivia-game.js"></script>
-   <!-- <div id="game"></div>-->
-    <script src="js/phaser/phaser.min.js"></script>
-    <script src="js/phaser/main.js"></script>
+    <div>INSERT TRIVIA GAME HERE</div> -->
+    <!-- <div id="game"></div>-->
+    <!-- <script src="../js/phaser/phaser.min.js"></script>
+    <script src="../js/phaser/main.js"></script> -->
+    <script src="../js/games/trivia-game.js"></script>
 </body>

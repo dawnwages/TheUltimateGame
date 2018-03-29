@@ -1,7 +1,13 @@
 .playgames{
    margin: 0px;
    padding: 130px 45px;
+   height: 600px;
+	background-image: url(images/pixelated_bg600.gif);
+	max-width: 956px;
+	background-image: no-repeat;
+	background-image: cover;
 }
+
 
 section {
 	height: 175px;
@@ -23,28 +29,129 @@ article{
 
 }
 
-.number{
+.randomNumber{
 	font-size: 48px;
-	text-align: center;
+    text-align: center;
+    width: 130px;
+    position: relative;
+    top: -100px;
+    height: 130px;
+    left: -5px;
+}
 
+.userNumber{
+	font-size: 48px;
+    text-align: center;
+    width: 130px;
+    position: absolute;
+    /* top: -100px; */
+    height: 130px;
+	/* left: 100px; */
+	float: right;
 }
 
 .crystal{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.thumbnail{
+/* .thumbnail{
 	border-radius: 25px;
 	margin-left: 45px;
 	margin-right: 45px;
+} */
+
+
+ /* ============================  CRYSTAL GAME  ========================== */
+.crystalOne{
+	border-radius: 25px;
+	height: 150px;
+	width: 150px;
+	position: relative;
+	top: -230px;
+	left: 350px;
 }
-.crystalimg{
+
+.crystalTwo{
+	border-radius: 25px;
+	height: 150px;
+	width: 150px;
+	position: relative;
+	/* float: left; */
+	top: -230px;
+	left: 400px;
+}
+
+.crystalThree{
+	border-radius: 25px;
+	margin-left: 45px;
+	margin-right: 45px;
+	height: 150px;
+	width: 150px;
+	position: relative;
+    top: 400px;
+	left: 700px;
+	text-align: center;
+}
+
+.crystalFour{
+	border-radius: 25px;
+	margin-left: 45px;
+	margin-right: 45px;
+	height: 150px;
+	width: 150px;
+	position: relative;
+    top: 188px;
+	left: 700px;
+	text-align: center;
+}
+
+/* .crystalimg{
 	width:auto;
 	height: 95px;
 	padding-left:20%;
 	padding-right:20%;
-}
+} */
 
 .caption{
 	text-align: center;
+}
+
+p {
+	margin-top: 25px;
+}
+
+pTwo {
+	margin-top: 25px;
+}
+
+h3 {
+	margin-top: 4px;
+    margin-bottom: -79px;
+}
+
+ /* ============================  BOSS GAME  ========================== */
+
+ .bossBG { 
+	background-image: url(../images/pixelated_bg6_cropped.gif);
+	height: 600px;
+	max-width: 960px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 40;
+
+ }
+
+
+/* ============================  TRIVIA GAME  ========================== */
+
+ .bgTest {
+	background-image: url(../images/pixelated_bg1.gif);
+	/* background-image: url(../images/dust_scratches.png); */
+	height: 600px;
+	width: 960px;
+	position: absolute;
+	top: 700px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }

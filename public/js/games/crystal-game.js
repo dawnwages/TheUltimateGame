@@ -4,39 +4,39 @@ $(document).ready(function(){
 		
 		let randoNumber = $('<section>')
 			.attr("id","random-number")
-			.attr("class", "number col-md-6")
+			.attr("class", "randomNumber")
 			.append("<div class='panel-heading'><h3> Crystal Points </h3></div><div class='panel-body'><p>00</p></div>");
 		
 		let userGuess = $('<section>')
 			.attr("id", "user-number")
-			.attr("class","number col-md-6")
-			.append("<div class='panel-heading'><h3> Your Points </h3></div><div class='panel-body'><p>00</p></div>");
+			.attr("class","userNumber")
+			.append("<div class='panel-heading'><h3> Your Points </h3></div><div class='panel-body'><p class='pTwo'>00</p></div>");
 	
 		let crystalOne = $('<button>')
 			.attr("id","crystal-one")
-			.attr("class","crystal col-md-2 thumbnail")
-			.append("<div class='panel-body'> <img id='crystal-img-one' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-one' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+			.attr("class","crystalOne")
+			.append("<div class='panel-body'> <img id='crystal-img-one' class='crystalimg' src='images/gem1.png'></div><div id='crystal-caption-one' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalTwo = $('<button>')
 			.attr("id","crystal-two")
-			.attr("class","crystal col-md-2 thumbnail")
-			.append("<div class='panel-body'> <img id='crystal-img-two' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-two' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+			.attr("class","crystalTwo")
+			.append("<div class='panel-body'> <img id='crystal-img-two' class='crystalimg' src='images/gem2.png'></div><div id='crystal-caption-two' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalThree = $('<button>')
 			.attr("id","crystal-three")
-			.attr("class","crystal col-md-2 thumbnail")
-			.append("<div class='panel-body'> <img id='crystal-img-three' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-three' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+			.attr("class","crystalThree")
+			.append("<div class='panel-body'> <img id='crystal-img-three' class='crystalimg' src='images/gem3.png'></div><div id='crystal-caption-three' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalFour = $('<button>')
 			.attr("id","crystal-four")
-			.attr("class","crystal col-md-2 thumbnail")
-			.append("<div class='panel-body'> <img id='crystal-img-four' class='crystalimg' src='https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/161017.jpg'></div><div id='crystal-caption-four' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+			.attr("class","crystalFour")
+			.append("<div class='panel-body'> <img id='crystal-img-four' class='crystalimg' src='images/gem4.png'></div><div id='crystal-caption-four' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 	
 	
 		let game = $('<div>')
 						.height(600)
-						.css("background-image", "url(images/background.png)")
+						.css("background-image", "url(images/pixelated_bg600.gif)")
 						.attr("class", "playgames")
 						.append(randoNumber)
 						.append(crystalOne)
@@ -68,65 +68,23 @@ $(document).ready(function(){
 	var randoCrystalLinks = [];
 
 	var crystalNames = [
-		"Chalcedony Rose",
-		"Azurite Specimen",
-		"Polished Chrysoprase Crystal",
-		"Blue Kyanite Crystal",
-		"Amazonite Crystal",
-		"Peacock Ore Crystal",
-		"Golden Apatite Crystal",
-		"Morrisonite Jasper Rough Crystal",
-		"Cats Eye Moonstone Cabochon",
-		"Aqua Aura Crystal Pair",
-		"Dendritic Agate Rough Crystal",
-		"Ruby Crystal Rough Stone",
-		"Shattuckite with Chrysocolla, Malachite, and Diaptase",
-		"Shungite",
-		"Rhondite",
-		"Sugilite",
-		"Vanadinite Cluster",
-		"Sodalite",
+		"blue gem",
+		"green gem",
+		"red gem",
+		"white gem",
 	]
 	var crystalImgs= [
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/171130.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/5/150983.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/171596.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/5/152552.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/6/160519.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/171842.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/173246.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/172137.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/3/130320a.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/5/151257_2.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/172761.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/2/921602.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/170963.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/172731.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/170509.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/172047.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/173627.jpg",
-		"https://www.crystalvaults.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/170340.jpg",
+		"/images/gem1.png",
+		"images/gem2.png",
+		"images/gem3.png",
+		"images/gem4.png",
 	]
 
 	var crystalURLs=[
-		"https://www.crystalvaults.com/171130",
-		"https://www.crystalvaults.com/150983",
-		"https://www.crystalvaults.com/171596",
-		"https://www.crystalvaults.com/152552",
-		"https://www.crystalvaults.com/160519",
-		"https://www.crystalvaults.com/171842",
-		"https://www.crystalvaults.com/173246",
-		"https://www.crystalvaults.com/172137",
-		"https://www.crystalvaults.com/130320",
-		"https://www.crystalvaults.com/151257",
-		"https://www.crystalvaults.com/172761",
-		"https://www.crystalvaults.com/921602",
-		"https://www.crystalvaults.com/170963",
-		"https://www.crystalvaults.com/172731",
-		"https://www.crystalvaults.com/170509",
-		"https://www.crystalvaults.com/172047",
-		"https://www.crystalvaults.com/173627",
-		"https://www.crystalvaults.com/170340",
+		"/images/gem1.png",
+		"images/gem2.png",
+		"images/gem3.png",
+		"images/gem4.png",
 	]
 	//what all of the buttons
 

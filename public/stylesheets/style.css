@@ -2,3 +2,227 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+body {
+  background: #6d6d6d;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 70px;
+  color: black;
+}
+
+h1,
+a {
+  color: black;
+}
+
+/* h2 { font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+} */
+
+.navBG { 
+  background-color: rgb(190, 76, 41);
+  margin-bottom: 30px;
+}
+
+/* .jumbotron {
+  background-color: grey;
+} */
+
+/* .navbar {
+  background-color: rgb(39, 39, 39);
+} */
+
+.navbar-brand {
+  float: right;
+    border: black;
+    border-style: solid;
+    position: absolute;
+    right: 22px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    top: 40px;
+}
+
+.logoutButton {
+  float: right;
+    position: absolute;
+    right: 22px;
+    top: 40px;
+}
+
+/* THE ULTIMATE GAME */
+.mainTitle {
+	color: white;
+	font-size: 35px;
+    font-weight: 700;
+    margin-right: 480px;
+    width: 100%;
+}
+
+#pet_name{
+  margin-bottom: 10px;
+}
+
+/********************** links *********************/
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  } 
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  
+  } 
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+  font-weight:      bold;
+
+  } 
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  none;
+  
+  } 
+
+/**************************** characters ****************************/
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+/* .row,
+.row > .column {
+  padding: 8px;
+} */
+
+/* Create 3 equal columns that floats next to each other */
+/* 25% for 4 */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  padding: 10px;
+  text-align: center;
+}
+
+.content,
+img {
+  padding: 10px;
+}
+
+input {
+  font-size: 14px;
+  margin: 10px;
+}
+
+
+/************************** crystal game ***************************/
+.playgames{
+  margin: 0px;
+  padding: 130px 45px;
+}
+
+section {
+ height: 175px;
+ background-color: #ffffff;
+ border-radius: 25px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article{
+ color: #ffffff;
+ text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron{
+ text-align:left;
+}
+.panel-heading{
+ text-align:center;
+
+}
+
+.number{
+ font-size: 48px;
+ text-align: center;
+
+}
+
+.crystal{
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .thumbnail{
+ border-radius: 25px;
+ margin-left: 45px;
+ margin-right: 45px;
+} */
+.crystalimg{
+  width: auto;
+  height: 95px;
+  padding-left: 15%;
+  padding-right: 20%;
+}
+
+.caption{
+ text-align: center;
+}
+
+/* ************************ navigation bar, top right  **************************** */
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  /* font-size: 20px; */
+  top: 32px;
+  left: 0;
+  width: 100%;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+li a:hover:not(.active) {
+  background-color:  firebrick;
+  border-radius: 25px;
+}
+
+.active {
+  background-color: firebrick;
+  border-radius: 25px;
+}
+
+
+/************************** header levels ***************************/
+header { width: 100%;
+  margin-bottom: 40px;
+
+}
