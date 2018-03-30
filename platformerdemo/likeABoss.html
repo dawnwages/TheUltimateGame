@@ -1,0 +1,74 @@
+<!doctype html>
+
+<head>
+    <title>Like A Boss</title>
+    <meta charset="utf-8">
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="boss.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Boss Header -->
+    <div class="jumbotron" id="banner">
+        <h1 class="text-center">Classic Boss Battle!</h1>
+    </div>
+
+    <div class="row">
+        <!-- spacing div -->
+        <div class="col-md-2" style="background-color: orange;"></div>
+
+        <div class="col-md-8" id="gameScreen">
+
+            <!-- Wrapper -->
+            <div class="wrapper">
+
+                <!-- Content Section -->
+                <section id="content">
+
+                    <!-- relatively positioned div -->
+                    <div id="relative">
+
+                        <!-- User div -->
+                        <div id="absolute1">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                    <span id="user-hp"></span>
+                                </div>
+                            </div>
+                            <img src="Shadow.png" alt="Shadow"> </div>
+
+                        <!-- Boss div -->
+                        <div id="absolute2">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                    <span id="boss-hp"></span>
+                                </div>
+                            </div>
+                            <img src="" class="img-responsive" id="boss-img">
+                        </div>
+
+                        <!-- a div positioned absolutely in the relative div -->
+                        <div id="absolute3">
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button class="btn btn-default" id="attack"><span class="glyphicon glyphicon-flash"></span> Attack</button>
+                                <button class="btn btn-default" id="potion">Potion <span class="badge" id="user-potions"></span></button>
+                                <button class="btn btn-default" id="special">Special <span class="badge" id="user-special"></span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+        <!-- spacing div -->
+        <div class="col-md-2" style="background-color: orange;"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="bossfight.js"></script>
+</body>

@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 24px;
+    line-height: 32px;
+    color: #333;
+}
+
+img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#banner {
+    background-color: orange;
+}
+
+#gameScreen {
+    background-color: black;
+}
+
+.wrapper {
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#relative {
+    background-image: url("PaprikaWasteland.jpg");
+    position: relative;
+    height: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#absolute1 {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    height: 150px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+#absolute2 {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 150px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+#absolute3 {
+    position: absolute;
+    right: 0px;
+    bottom: -45px;
+    height: 100px;
+    width: 325px;
+    padding: 20px;
+    text-align: center;
+}
