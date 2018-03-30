@@ -14,10 +14,11 @@ $(document).ready(function () {
           console.log(response)
           response.forEach(v => {
             console.log(v.char_name)
-            $("#current-characters").append($("<button>")
+            $("#current-characters").append($("<a>")
+            .attr("href", "/lvl/" + v.lvl_comp + "?ch=" + v.id).append($("<button>")
               .attr("character_id", v.id)
               .attr("class", "created-characters btn btn-default")
-              .text("Continue as " + v.char_name));
+                .text("Continue as " + v.char_name)));
           })
         }
         // If there's an error, log the error
@@ -45,6 +46,7 @@ $(document).ready(function () {
         CharacterId: playerId
       }).then(function (data) {
         console.log(data);
+        window.location.href = "/lvl/1?ch=" + playerId;
       }).catch(function (err) {
         console.log(err)
       })
