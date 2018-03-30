@@ -115,6 +115,7 @@ module.exports = function (app) {
       attack: req.body.attack,
       coins: req.body.coins,
       lvl_comp: req.body.lvl_comp,
+      sprite: req.body.sprite,
       UserId: req.body.UserId
     }).then(function (results) {
       res.json(results);
