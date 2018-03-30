@@ -2,7 +2,6 @@ PlayState = {};
 
 PlayState.preload = function () {
     this.game.load.json('level:0', 'data/level00.json');
-    this.game.load.json('level:1', 'data/level01.json');
     this.game.load.image('background', 'images/background.png');
 
     this.game.load.image('ground', 'images/ground.png');
@@ -299,9 +298,29 @@ PlayState._onHeroVsKey = function (hero, key) {
     this.hasKey = true;
 };
 
+//UPDATE TO DIRECT TO CRYSTAL
 PlayState._onHeroVsDoor = function (hero, door) {
     this.sfx.door.play();
-    this.game.state.restart(true, false, { level: this.level + 1 });
+    
+    var userId = location.search.split("=") || [0, 1];
+
+    userId = userId[1];
+
+    var link = "/lvl/1?ch=1";
+
+    function redirectLink() {
+        if(userId) {
+            window.location.href = "/lvl/1?ch="+userId;
+        } else {
+            window.location.href = link;
+        }
+
+
+    };
+
+    redirectLink();
+
+    //this.game.state.restart(true, false, { level: this.level});
 };
 
 PlayState._handleInput = function () {
