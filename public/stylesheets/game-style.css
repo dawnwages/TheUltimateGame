@@ -62,11 +62,59 @@ article{
 
 
  /* ============================  CRYSTAL GAME  ========================== */
+ .playgames{
+	margin: 0px;
+	padding: 130px 45px;
+  }
+  
+  section {
+   height: 175px;
+   background-color: #ffffff;
+   border-radius: 25px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  article{
+   color: #ffffff;
+   text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .jumbotron{
+   text-align:left;
+  }
+  .panel-heading{
+   text-align:center;
+  
+  }
+  
+  .number{
+   font-size: 48px;
+   text-align: center;
+  
+  }
+  
+  .crystal{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  /* .thumbnail{
+   border-radius: 25px;
+   margin-left: 45px;
+   margin-right: 45px;
+  } */
+  .crystalimg{
+	width: auto;
+	height: 95px;
+	padding-left: 15%;
+	padding-right: 20%;
+  }
+  
+
 .crystalOne{
 	border-radius: 25px;
 	height: 150px;
 	width: 150px;
-	position: relative;
+	position: absolute;
 	top: -230px;
 	left: 350px;
 }
@@ -75,7 +123,7 @@ article{
 	border-radius: 25px;
 	height: 150px;
 	width: 150px;
-	position: relative;
+	position: absolute;
 	/* float: left; */
 	top: -230px;
 	left: 400px;
@@ -87,10 +135,9 @@ article{
 	margin-right: 45px;
 	height: 150px;
 	width: 150px;
-	position: relative;
+	position: absolute;
     top: 400px;
 	left: 700px;
-	text-align: center;
 }
 
 .crystalFour{
@@ -99,7 +146,7 @@ article{
 	margin-right: 45px;
 	height: 150px;
 	width: 150px;
-	position: relative;
+	position: absolute;
     top: 188px;
 	left: 700px;
 	text-align: center;
@@ -116,11 +163,8 @@ article{
 	text-align: center;
 }
 
-p {
-	margin-top: 25px;
-}
 
-pTwo {
+.pTwo {
 	margin-top: 25px;
 }
 
@@ -149,9 +193,44 @@ h3 {
 	/* background-image: url(../images/dust_scratches.png); */
 	height: 600px;
 	width: 960px;
-	position: absolute;
-	top: 700px;
 	background-repeat: no-repeat;
 	background-size: cover;
 
 }
+
+/* .button { 
+	background-color:  firebrick;
+	border-radius: 25px;
+	color: white;
+
+} */
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+  }
+  
+  li {
+	float: right;
+  }
+  
+  li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-radius: 25px;
+  }
+  
+  li a:hover:not(.active) {
+	background-color:  firebrick;
+	border-radius: 25px;
+  }
+  
+  .active {
+	background-color: firebrick;
+	border-radius: 25px;
+  }

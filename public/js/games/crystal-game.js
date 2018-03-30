@@ -5,32 +5,32 @@ $(document).ready(function(){
 		let randoNumber = $('<section>')
 			.attr("id","random-number")
 			.attr("class", "randomNumber")
-			.append("<div class='panel-heading'><h3> Crystal Points </h3></div><div class='panel-body'><p>00</p></div>");
+			.append("<div class='panel-heading'><h3> Crystal Points </h3></div><div class='panel-body'><div class='pTwo'>00</div></div>");
 		
 		let userGuess = $('<section>')
 			.attr("id", "user-number")
 			.attr("class","userNumber")
-			.append("<div class='panel-heading'><h3> Your Points </h3></div><div class='panel-body'><p class='pTwo'>00</p></div>");
+			.append("<div class='panel-heading'><h3> Your Points </h3></div><div class='panel-body'><div class='pTwo'>00</div></div>");
 	
 		let crystalOne = $('<button>')
 			.attr("id","crystal-one")
 			.attr("class","crystalOne")
-			.append("<div class='panel-body'> <img id='crystal-img-one' class='crystalimg' src='images/gem1.png'></div><div id='crystal-caption-one' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+			.append("<div class='panel-body'> <img id='crystal-img-one' class='crystalimg' src='images/gem1_blue.png'></div><div id='crystal-caption-one' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalTwo = $('<button>')
 			.attr("id","crystal-two")
 			.attr("class","crystalTwo")
-			.append("<div class='panel-body'> <img id='crystal-img-two' class='crystalimg' src='images/gem2.png'></div><div id='crystal-caption-two' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+			.append("<div class='panel-body'> <img id='crystal-img-two' class='crystalimg' src='images/gem2_green.png'></div><div id='crystal-caption-two' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalThree = $('<button>')
 			.attr("id","crystal-three")
 			.attr("class","crystalThree")
-			.append("<div class='panel-body'> <img id='crystal-img-three' class='crystalimg' src='images/gem3.png'></div><div id='crystal-caption-three' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+			.append("<div class='panel-body'> <img id='crystal-img-three' class='crystalimg' src='images/gem3_red.png'></div><div id='crystal-caption-three' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalFour = $('<button>')
 			.attr("id","crystal-four")
 			.attr("class","crystalFour")
-			.append("<div class='panel-body'> <img id='crystal-img-four' class='crystalimg' src='images/gem4.png'></div><div id='crystal-caption-four' class='caption'><h6>Rutilated Quartz Point</h6></div>");
+			.append("<div class='panel-body'> <img id='crystal-img-four' class='crystalimg' src='images/gem4_white.png'></div><div id='crystal-caption-four' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 	
 	
@@ -74,17 +74,17 @@ $(document).ready(function(){
 		"white gem",
 	]
 	var crystalImgs= [
-		"/images/gem1.png",
-		"images/gem2.png",
-		"images/gem3.png",
-		"images/gem4.png",
+		"/images/gem1_blue.png",
+		"/images/gem2_green.png",
+		"/images/gem3_red.png",
+		"../images/gem4_white.png",
 	]
 
 	var crystalURLs=[
-		"/images/gem1.png",
-		"images/gem2.png",
-		"images/gem3.png",
-		"images/gem4.png",
+		"/images/gem1_blue.png",
+		"/images/gem2_green.png",
+		"/images/gem3_red.png",
+		"/images/gem4_white.png",
 	]
 	//what all of the buttons
 
