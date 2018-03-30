@@ -2,7 +2,7 @@
    margin: 0px;
    padding: 130px 45px;
    height: 600px;
-	background-image: url(images/pixelated_bg600.gif);
+	background-image: url(../images/pixelated_bg600.gif);
 	max-width: 956px;
 	background-image: no-repeat;
 	background-image: cover;
@@ -115,8 +115,8 @@ article{
 	height: 150px;
 	width: 150px;
 	position: absolute;
-	top: -230px;
-	left: 350px;
+	top: 188px;
+	left: 400px;
 }
 
 .crystalTwo{
@@ -124,8 +124,7 @@ article{
 	height: 150px;
 	width: 150px;
 	position: absolute;
-	/* float: left; */
-	top: -230px;
+	top: 400px;
 	left: 400px;
 }
 
@@ -175,17 +174,20 @@ h3 {
 
  /* ============================  BOSS GAME  ========================== */
 
- .bossBG { 
+ .bossBG {
 	background-image: url(../images/pixelated_bg6_cropped.gif);
 	height: 600px;
 	max-width: 960px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 40;
-
+	color:white;
  }
 
-
+.bossBG h2 {
+	color:rgb(85, 85, 85);
+	background:white;
+}
 /* ============================  TRIVIA GAME  ========================== */
 
  .bgTest {

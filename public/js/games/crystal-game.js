@@ -1,11 +1,20 @@
 $(document).ready(function(){
+	var userId = location.search.split("=") || [0,1];
+	userId = userId[1];
+	$(".nav-links").each(function () {
+		if (userId){
+			$(this).attr("href", $(this).attr("href") + "?ch=" + userId);
+		}
+		else {
+			$(this).attr("href", $(this).attr("href") + "?ch=1");
+		}
+	});
 
 	function genGame(){
 		
 		let randoNumber = $('<section>')
-			.attr("id","random-number")
 			.attr("class", "randomNumber")
-			.append("<div class='panel-heading'><h3> Crystal Points </h3></div><div class='panel-body'><div class='pTwo'>00</div></div>");
+			.append("<div class='panel-heading'><h3> Crystal Points </h3></div><div class='panel-body'><div class='pTwo' id='random-number'>00</div></div>");
 		
 		let userGuess = $('<section>')
 			.attr("id", "user-number")
@@ -36,7 +45,7 @@ $(document).ready(function(){
 	
 		let game = $('<div>')
 						.height(600)
-						.css("background-image", "url(images/pixelated_bg600.gif)")
+						.css("background-image", "url(../images/pixelated_bg600.gif)")
 						.attr("class", "playgames")
 						.append(randoNumber)
 						.append(crystalOne)
@@ -93,7 +102,7 @@ $(document).ready(function(){
 	function randoGen(){
 		randoNumber = Math.floor((Math.random()*upperLimit) + lowerLimit);
 		console.log(randoNumber);
-		$("#random-number .panel-body").text(randoNumber);
+		$("#random-number").text(randoNumber);
 		$("#wins .panel-body").text(totalWins);
 		$("#losses .panel-body").text(totalLosses);
 
