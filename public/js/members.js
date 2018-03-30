@@ -16,7 +16,7 @@ $(document).ready(function () {
             console.log(v.char_name)
             $("#current-characters").append($("<button>")
               .attr("character_id", v.id)
-              .attr("class", "created-characters")
+              .attr("class", "created-characters btn btn-default")
               .text("Continue as " + v.char_name));
           })
         }
@@ -35,6 +35,7 @@ $(document).ready(function () {
       attack: characterSelection.attr('attack'),
       coins: 0,
       lvl_comp: 0,
+      sprite: characterSelection.attr('value'),
       UserId: $("#user-id").attr('data')
     }).then(function (data) {
       console.log(data)
