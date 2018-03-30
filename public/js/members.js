@@ -46,7 +46,10 @@ $(document).ready(function () {
         CharacterId: playerId
       }).then(function (data) {
         console.log(data);
-        window.location.href = "/lvl/1?ch=" + playerId;
+
+        window.location.href = "/play?ch="+playerId;
+
+
       }).catch(function (err) {
         console.log(err)
       })
