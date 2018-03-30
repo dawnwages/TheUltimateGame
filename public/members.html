@@ -6,72 +6,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="../stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navBG" class="navbar">
     <div class="container-fluid">
+      <!--******************** nav header ********************* -->
       <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
+        <div class="mainTitle">
+          <h1>
+            <a href="login.html">THE ULTIMATE GAME</a>
+          </h1>
+        </div>
+        <!-- logout top right -->
+        <div class="logoutButton">
+            <button href="/logout" class="btn btn-default create-char">Logout</button>
+        </div>
+        
+        <!-- <a class="navbar-brand" href="/logout">
           Logout
-        </a>
+        </a> -->
       </div>
     </div>
   </nav>
+  <!--******************** jumbotron ********************* -->
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+    <div class="jumbotron">
+      <div class="container">
         <h2>Welcome
           <span class="member-name"></span>!</h2>
-      </div>
-    </div>
-    <div class="row" id="has-characters">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>You have the following characters available:</h2>
-        <div id="current-characters"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2 id="user-id">Create a New Character</h2>
-        <form class="create-character">
-          <div class="form-group">
-            <label for="char_name">Character Name</label>
-            <input type="text" class="form-control" id="char_name" placeholder="Name">
+        <div class="container">
+          <div class="row" id="has-characters">
+            
+              <h2>You have the following characters available:</h2>
+              <div id="current-characters"></div>
+           
           </div>
-          <div class="form-group">
-            <label for="character-selection">Character Type</label>
-            <br>
-            <input type="radio" name="character-selection" class="character-type" value="warrior" hp="50" attack="100"> Warrior (50 HP/ 100 Attack)
-            <br>
-            <input type="radio" name="character-selection" class="character-type" value="wizard" hp="100" attack="50"> Wizard (100 HP/ 50 Attack)
-            <br>
-            <input type="radio" name="character-selection" class="character-type" value="thief" hp="75" attack="75"> Thief (75 HP/ 75 Attack)
-            <br>
+          <div class="row">
+            
+              <h2 id="user-id">Create a New Character</h2>
+              <form class="create-character">
+                <div class="form-group">
+                  <label for="char_name">Character Name</label>
+                  <input type="text" class="form-control" id="char_name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="character-selection">Character Type</label>
+                  <!--******************** character portfolio ********************* -->
+                  <div class="row">
+                      <div class="column">
+                          <div class="content">
+                              <img src="images/warrior.png" alt="warrior" style="width: 100px; height: 100px;">
+                              <h3>Bold.</h3>
+                              <input type="radio" name="character-selection" class="character-type" value="warrior" hp="50" attack="100"> Warrior (50 HP/ 100 Attack)
+                          </div>
+                      </div>
+                      <div class="column">
+                          <div class="content">
+                              <img src="images/wizard.png" alt="wizard" style="width: 100px; height: 100px;">
+                              <h3>Magical.</h3>
+                              <input type="radio" name="character-selection" class="character-type" value="wizard" hp="100" attack="50"> Wizard (100 HP/ 50 Attack)
+                          </div>
+                      </div>
+                      <div class="column">
+                          <div class="content">
+                              <img src="images/thief.png" alt="thief" style="width: 100px; height: 100px;">
+                              <h3>Sneaky.</h3>
+                              <input type="radio" name="character-selection" class="character-type" value="thief" hp="75" attack="75"> Thief (75 HP/ 75 Attack)
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="pet-name">Pet Name</label>
+                  <!--******************** pet portfolio ********************* -->
+                  <input type="text" class="form-control" id="pet_name" placeholder="Pet's Name">
+                  <div class="form-group">
+                    <label for="pet-type">Pet Type</label>
+                    <div class="row">
+                        <div class="column">
+                            <div class="content">
+                                <img src="images/dog.gif" alt="dog" style="width: 50px; height: 50px;">
+                                <h3>Pick me! Woof!</h3>
+                                <input type="radio" name="pet-type" value="dog"> Dog
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content">
+                                <img src="images/cat.gif" alt="cat" style="width: 50px; height: 50px;">
+                                <h3>Pick me! Meow!</h3>
+                                <input type="radio" name="pet-type" value="cat"> Cat
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content">
+                                <img src="images/rooster.gif" alt="rooster" style="width: 50px; height: 50px;">
+                                <h3>Pick me! Cluck!</h3>
+                                <input type="radio" name="pet-type" value="rooster"> Rooster
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <br>
+                    <input type="radio" name="pet-type" value="dog"> Dog
+                    <br>
+                    <input type="radio" name="pet-type" value="cat"> Cat
+                    <br>
+                    <input type="radio" name="pet-type" value="rooster"> Rooster
+                    <br> -->
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-default create-char">Create Character</button>
+              </form>
+            
           </div>
-          <div class="form-group">
-            <label for="pet-name">Pet Name</label>
-            <input type="text" class="form-control" id="pet_name" placeholder="Pet's Name">
-            <div class="form-group">
-              <label for="pet-type">Pet Type</label>
-              <br>
-              <input type="radio" name="pet-type" value="dog"> Dog
-              <br>
-              <input type="radio" name="pet-type" value="cat"> Cat
-              <br>
-              <input type="radio" name="pet-type" value="rooster"> Rooster
-              <br>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-default create-char">Create Character</button>
-        </form>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Javascript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+  <script type="text/javascript" src="../js/members.js"></script>
 
 </body>
 
