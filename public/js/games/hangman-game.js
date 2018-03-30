@@ -7,10 +7,46 @@ $(document).ready(function(){
 				.text("this is the user text");
 
 			let genButton = $('<button>')
-				.attr("onclick","generatePick()");
+				.attr("id","generatePick")
+				.text("click to generate hangman choice")
+				.attr("class", "btn btn-success btn-lg");
 				
+			let clearButton = $('<button>')
+				.attr("onclick","clearPick()")
+				.text("Start Hangman Over")
+				.attr("class", "btn btn-warning btn-lg");
 			
-			// let userGuess = $('<section>')
+			let winCount = $('<div>')
+				.attr("id","Winner")
+				.attr("class","row")
+				.text("this is where we count your wins");
+
+			let successText = $('<span>')
+				.attr("id", "successText")
+				.attr("class","row")
+				.text("success text");
+			
+			let messagePick = $('<span>')
+				.attr("id", "messagePick")
+				.attr("class","row")
+				.text("messagePick");
+
+			let hangWord = $('<span>')
+				.attr("id", "Hangman")
+				.attr("class","row")
+				.text("hangman word");
+
+			let badGuesses = $('<span>')
+				.attr("id", "badGuess")
+				.attr("class","row")
+				.text("bad guesses");
+
+			let guessesLeft = $('<span>')
+				.attr("id", "badGuess")
+				.attr("class","row")
+				.text("guesses Left");
+			
+				// let userGuess = $('<section>')
 			// 	.attr("id", "user-number")
 			// 	.attr("class","number col-md-6")
 			// 	.append("<div class='panel-heading'><h3> Your Points </h3></div><div class='panel-body'><p>00</p></div>");
@@ -42,7 +78,13 @@ $(document).ready(function(){
 							.css("background-image", "url(images/background.png)")
 							.attr("class", "playgames")
 							.append(userText)
-							.append(genButton);
+							.append(genButton)
+							.append(clearButton)
+							.append(winCount)
+							.append(messagePick)
+							.append(hangWord)
+							.append(badGuesses)
+							.append(guessesLeft);
 		
 			$("#hangmangame").append(game);
 							
@@ -99,7 +141,6 @@ function clearPick(){
 };
 
 function generatePick(){
-  genGame();
 	var hangDisplay = document.getElementById("Hangman");
 		hangDisplay.HTML = null;
 		hangDisplay.innerHTML = null;
@@ -113,8 +154,8 @@ function generatePick(){
 		spaceCounter = 0;
 		totalCharSuccess = 0;
 		totalGuesses =15;
-		successText.innerHTML = null;
-		messagePick.innerHTML= null;
+		//successText.innerHTML = null;
+		//messagePick.innerHTML= null;
 
 		computerPick = StevenUniverseChar[Math.floor(Math.random() * StevenUniverseChar.length)];
 		console.log("this is the index of computerPick to figure out img Pick :"+StevenUniverseChar.indexOf(computerPick));
@@ -146,11 +187,11 @@ function generatePick(){
 		};
 
 	//alert(computerPick);
-	function imgHint() {
-		document.querySelector("#imgHint").src = "assets/images/"+displayImg;
-		}
+	// function imgHint() {
+	// 	document.querySelector("#imgHint").src = "assets/images/"+displayImg;
+	// 	}
 
-	imgHint()
+	// imgHint()
 
 				var upperComputerPick = computerPick.toUpperCase();
 				console.log( computerPick + upperComputerPick);
@@ -284,13 +325,14 @@ function generatePick(){
 							updateScore();
 
 							function Winner() {
-								document.querySelector("#Winner").innerHTML = "Wins: " + userWins;
+								$("#Winner").text(userWins);
 							}
 
 							Winner();
 
 							function guessesLeft() {
-								document.querySelector("#guessesLeft").innerHTML = "Guesses remaining: " + totalGuesses;
+								$("#guessesLeft").text(totalGuesses);
+								
 							}
 
 							guessesLeft();					
@@ -393,6 +435,8 @@ StevenUniverseImg = [
 "Fluorite_1289.png",
 "RhodoniteKPRF-_by_DisneyBoy16.png"]
 	
+
+$(document).on("click", "#generatePick", generatePick);
 	
 	}); //end of document.ready 
 	
