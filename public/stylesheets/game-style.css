@@ -29,43 +29,11 @@ article{
 
 }
 
-.randomNumber{
-	font-size: 48px;
-    text-align: center;
-    width: 130px;
-    position: relative;
-    top: -100px;
-    height: 130px;
-    left: -5px;
-}
 
-.userNumber{
-	font-size: 48px;
-    text-align: center;
-    width: 130px;
-    position: absolute;
-    /* top: -100px; */
-    height: 130px;
-	/* left: 100px; */
-	float: right;
-}
-
-.crystal{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/* .thumbnail{
-	border-radius: 25px;
-	margin-left: 45px;
-	margin-right: 45px;
-} */
 
 
  /* ============================  CRYSTAL GAME  ========================== */
- .playgames{
-	margin: 0px;
-	padding: 130px 45px;
-  }
+
   
   section {
    height: 175px;
@@ -86,22 +54,42 @@ article{
    text-align:center;
   
   }
+
+  .randomNumber{
+	font-size: 48px;
+    text-align: center;
+    width: 130px;
+    position: absolute;
+    top: 25%;
+    height: 130px;
+    left: 10%;
+}
+
+.userNumber{
+	font-size: 48px;
+    text-align: center;
+    width: 130px;
+    position: absolute;
+    top: 25%;
+    height: 130px;
+	left: 14%;
+    margin-left: 10%;
+}
+
+.panel-body {
+    padding-top: 40px;
+}
   
   .number{
    font-size: 48px;
    text-align: center;
-  
   }
   
   .crystal{
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
-  /* .thumbnail{
-   border-radius: 25px;
-   margin-left: 45px;
-   margin-right: 45px;
-  } */
+  
   .crystalimg{
 	width: auto;
 	height: 95px;
@@ -115,8 +103,9 @@ article{
 	height: 150px;
 	width: 150px;
 	position: absolute;
-	top: -230px;
-	left: 350px;
+	top: 25%;
+	left: 60%;
+	margin-left: 10px;
 }
 
 .crystalTwo{
@@ -124,32 +113,28 @@ article{
 	height: 150px;
 	width: 150px;
 	position: absolute;
-	/* float: left; */
-	top: -230px;
-	left: 400px;
+	top: 49%;
+	left: 46%;
 }
 
 .crystalThree{
 	border-radius: 25px;
-	margin-left: 45px;
-	margin-right: 45px;
 	height: 150px;
 	width: 150px;
 	position: absolute;
-    top: 400px;
-	left: 700px;
+    top: 49%;
+	left: 60%;
+	margin-left: 10px;
 }
 
 .crystalFour{
 	border-radius: 25px;
-	margin-left: 45px;
-	margin-right: 45px;
 	height: 150px;
 	width: 150px;
 	position: absolute;
-    top: 188px;
-	left: 700px;
-	text-align: center;
+    top: 25%;
+    left: 46%;
+    text-align: center;
 }
 
 /* .crystalimg{
@@ -164,9 +149,9 @@ article{
 }
 
 
-.pTwo {
+/* .pTwo {
 	margin-top: 25px;
-}
+} */
 
 h3 {
 	margin-top: 4px;
@@ -182,8 +167,14 @@ h3 {
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 40;
+	color: white;
 
  }
+
+ .battle { margin-top: 350px;
+	color: white;
+ }
+
 
 
 /* ============================  TRIVIA GAME  ========================== */
@@ -198,12 +189,21 @@ h3 {
 
 }
 
-/* .button { 
-	background-color:  firebrick;
-	border-radius: 25px;
-	color: white;
+#answer0 { margin: 10px;
 
-} */
+}
+
+#answer1 { margin: 10px;
+	
+}
+
+#answer2 { margin: 10px;
+	
+}
+
+#answer3 { margin: 10px;
+	
+}
 
 ul {
 	list-style-type: none;

@@ -12,84 +12,102 @@
 </head>
 
 <body>
-        <nav class="navBG" class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-        
-                        <div class="mainTitle">
-                            <h1>THE ULTIMATE GAME</h1>
-                        </div>
-                    </div>
-                    <header>
-                        <ul>
-                            <li>
-                                <a href="/04game_fight.html">Level Four</a>
-                            </li>
-                            <li>
-                                <a href="/03game_hangman.html">Level Three</a>
-                            </li>
-                            <li>
-                                <a href="02game_trivia.html">Level Two</a>
-                            </li>
-                            <li>
-                                <a href="/01game_crystal.html">Level One</a>
-                            </li>
-                            <li>
-                                <a  href="/play.html">Start Game</a>
-                            </li>
-                        </ul>
-                    </header>
-            </nav>
+    <nav class="navBG" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <div class="mainTitle">
+                    <h1>THE ULTIMATE GAME</h1>
+                </div>
+            </div>
+            <header>
+                <ul>
+                    <li>
+                        <a href="/04game_fight.html">Level Four</a>
+                    </li>
+                    <li>
+                        <a href="/03game_hangman.html">Level Three</a>
+                    </li>
+                    <li>
+                        <a href="02game_trivia.html">Level Two</a>
+                    </li>
+                    <li>
+                        <a href="/01game_crystal.html">Level One</a>
+                    </li>
+                    <li>
+                        <a href="/play.html">Start Game</a>
+                    </li>
+                </ul>
+            </header>
+    </nav>
     <div class="container">
         <!-- JUMBOTRON -->
         <div class="jumbotron" id="banner">
             <h1 class="text-center">Classic Boss Battle!</h1>
         </div>
 
-        <!-- BOSS -->
-        <div class="row">
-            <div class="col-md-6 col-md-offset-6">
-                <h2>Boss Placeholder</h2>
-                <div>
-                    <img src="" class="img-responsive" id="boss-img">
+        <!-- BACKGROUND -->
+        <div class="bossBG">
+            <div class="row">
+
+                <!-- CHARACTER -->
+                <div class="battle">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <h2 style="font-size: 25px;
+                        font-weight: 500; color: white; text-align:center">User Placeholder</h2>
+                        <div>
+                            <img src="" class="img-responsive" id="user-img">
+                        </div>
+                        <div style="font-size: 20px;
+                        font-weight: 500; text-align:center">HP:
+                            <span id="user-hp"></span>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+
+                    <!-- BOSS -->
+                    <div class="col-md-3">
+                        <h2 style="font-size: 25px;
+                        font-weight: 500; color: white; text-align:center">Boss Placeholder</h2>
+                        <div>
+                            <img src="" class="img-responsive" id="boss-img">
+                        </div>
+                        <div style="font-size: 20px;
+                        font-weight: 500; text-align:center">HP:
+                            <span id="boss-hp"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
                 </div>
-                <div>HP: 
-                    <span id="boss-hp"></span>
+
+            </div>
+            <!-- ACTIONS -->
+            <div class="row">
+                <div style="text-align:center">
+                    <button class="btn btn-default" id="attack">
+                        <span class="glyphicon glyphicon-flash"></span> Attack</button>
+                    <button class="btn btn-default" id="potion">
+                        <span class="glyphicon glyphicon-baby-formula"></span> Potion
+                        <span class="badge" id="user-potions"></span>
+                    </button>
+                    <button class="btn btn-default" id="special">
+                        <span class="glyphicon glyphicon-star-empty"></span> Special ability</button>
                 </div>
             </div>
         </div>
-        <!-- CHARACTER -->
-        <div class="row">
-            <div class="col-md-6 col-md-offset-1">
-                <h2>User Placeholder</h2>
-                <div>
-                    <img src="" class="img-responsive" id="user-img">
-                </div>
-                <div>HP:
-                    <span id="user-hp"></span>
-                    <br/><br/>
-                </div>
-            </div>
-        </div>
-        <!-- ACTIONS -->
-        <div class="row">
-            <div class="buttons col-md-6 col-md-offset-1">
-            <button class="btn btn-default" id="attack">
-                <span class="glyphicon glyphicon-flash"></span> Attack</button>
-            <button class="btn btn-default" id="potion">
-                <span class="glyphicon glyphicon-baby-formula"></span> Potion <span class="badge" id="user-potions"></span></button>
-            <button class="btn btn-default" id="special">
-                <span class="glyphicon glyphicon-star-empty"></span> Special ability</button>
-                </div>
-        </div>
+        <!-- BACKGROUND END -->
+
+        <!-- BATTLE RESULTS -->
         <div class="page-header">
             <h2>
                 <span class="glyphicon glyphicon-menu-hamburger"></span>Battle Results</h2>
         </div>
         <div id="battle-results"></div>
-        <div class="bossBG">test</div>
     </div>
 
+    <!-- JAVASCRIPT -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/games/bossfight.js"></script>
