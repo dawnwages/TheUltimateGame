@@ -31,6 +31,9 @@ module.exports = function(app) {
 
   app.get("/lvl/:id", isAuthenticated, function (req, res) {
     switch (req.params.id) {
+      case "0":
+        res.sendFile(path.join(__dirname, "../public/play.html"));
+        break;
       case "1":
         res.sendFile(path.join(__dirname, "../public/01game_crystal.html"));
         break;
