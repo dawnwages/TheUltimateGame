@@ -1,45 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 
 <head>
-    <title>The Ultimate Game</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boss Fight</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="../stylesheets/game-style.css" rel="stylesheet">
+    <link href="../stylesheets/style.css" rel="stylesheet">
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <style>
-        canvas {
-            margin: 0 auto;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <ul>
-                    <a href="/play.html">
-                        <li>Start Game</li>
-                    </a>
-                    <a href="/01game_crystal.html">
-                        <li>Crystal - Level One</li>
-                    </a>
-                    <a href="/02game_trivia.html">
-                        <li>Trivia - Level Two</li>
-                    </a>
-                    <a href="/03game_hangman.html">
-                        <li>Hangman - Level Three</li>
-                    </a>
-                    <a href="/04game_fight.html">
-                        <li>Fight - Level Four</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
     <nav class="navBG" class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -51,7 +23,7 @@
             <header>
                 <ul>
                     <li>
-                        <a class="active" href="/04game_fight.html">Level Four</a>
+                        <a href="/04game_fight.html">Level Four</a>
                     </li>
                     <li>
                         <a href="/03game_hangman.html">Level Three</a>
@@ -68,8 +40,62 @@
                 </ul>
             </header>
     </nav>
-    <div>INSERT Fight the boss GAME HERE</div>
-    <!-- <div id="game"></div>-->
-    <script src="js/phaser/phaser.min.js"></script>
-    <script src="js/phaser/main.js"></script>
+    <div class="container">
+        <!-- JUMBOTRON -->
+        <div class="jumbotron" id="banner">
+            <h1 class="text-center">Classic Boss Battle!</h1>
+        </div>
+
+        <!-- BOSS -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-6">
+                <h2>Boss Placeholder</h2>
+                <div>
+                    <img src="" class="img-responsive" id="boss-img">
+                </div>
+                <div>HP:
+                    <span id="boss-hp"></span>
+                </div>
+            </div>
+        </div>
+        <!-- CHARACTER -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-1">
+                <h2>User Placeholder</h2>
+                <div>
+                    <img src="" class="img-responsive" id="user-img">
+                </div>
+                <div>HP:
+                    <span id="user-hp"></span>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <!-- ACTIONS -->
+        <div class="row">
+            <div class="buttons col-md-6 col-md-offset-1">
+                <button class="btn btn-default" id="attack">
+                    <span class="glyphicon glyphicon-flash"></span> Attack</button>
+                <button class="btn btn-default" id="potion">
+                    <span class="glyphicon glyphicon-baby-formula"></span> Potion
+                    <span class="badge" id="user-potions"></span>
+                </button>
+                <button class="btn btn-default" id="special">
+                    <span class="glyphicon glyphicon-star-empty"></span> Special ability</button>
+            </div>
+        </div>
+        <div class="page-header">
+            <h2>
+                <span class="glyphicon glyphicon-menu-hamburger"></span>Battle Results</h2>
+        </div>
+        <div id="battle-results"></div>
+        <div class="bossBG">test</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/games/bossfight.js"></script>
 </body>
+
+</html>
