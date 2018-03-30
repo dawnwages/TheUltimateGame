@@ -174,17 +174,20 @@ h3 {
 
  /* ============================  BOSS GAME  ========================== */
 
- .bossBG { 
+ .bossBG {
 	background-image: url(../images/pixelated_bg6_cropped.gif);
 	height: 600px;
 	max-width: 960px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 40;
-
+	color:white;
  }
 
-
+.bossBG h2 {
+	color:rgb(85, 85, 85);
+	background:white;
+}
 /* ============================  TRIVIA GAME  ========================== */
 
  .bgTest {
