@@ -6,7 +6,7 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
 
-  app.get("/", function(req, res) {
+  app.get("/signup", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
@@ -14,7 +14,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
-  app.get("/login", function(req, res) {
+  app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
@@ -29,7 +29,7 @@ module.exports = function(app) {
   });
 
 
-  app.get("/lvl/:id", function (req, res) {
+  app.get("/lvl/:id", isAuthenticated, function (req, res) {
     switch (req.params.id) {
       case "1":
         res.sendFile(path.join(__dirname, "../public/01game_crystal.html"));
@@ -50,7 +50,7 @@ module.exports = function(app) {
 
   //Dawn - putting in the index.html file for the user to be able to play.
   //Make sure we integrate with the if the user is logged in authentication functionality
-  app.get("/play",  function(req, res) {
+  app.get("/play", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/play.html"));
   });
 

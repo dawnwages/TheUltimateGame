@@ -5,7 +5,6 @@ module.exports = function (sequelize, DataTypes) {
         char_name: {
             type: DataTypes.STRING,
             allowNull: false,
-            defaultValue: "Jimbo", //this needs to be removed in the real version; just for proof of concept
             validate: {
                 len: [1, 255]
             }
@@ -32,6 +31,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         sprite: {
             type: DataTypes.STRING,
+            defaultValue: "warrior",
             allowNull: false
         }
     });

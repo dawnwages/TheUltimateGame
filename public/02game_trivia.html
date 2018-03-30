@@ -10,16 +10,6 @@
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- <style>
-        canvas {
-            margin: 0 auto;
-            background-image: url(images/pixelated_bg1.gif);
-            height: 600px;
-            width: 960px;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style> -->
 </head>
 
 <body>
@@ -76,49 +66,28 @@
             </div>>
         </div>
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="game-modal" role="dialog">
+        <div class="modal-dialog">
     
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-    <div class="row center">
-            <div style="background-color: blue; height: 600px; width: 960px;">
-                    <div class="row-header">
-                            <br>
-                            <div id="time"></div>
-                            <br>
-                            <div id="questions"></div>
-                            <button class="button" id="answer0" value=0></button>
-                            <br>
-                            <button class="button" id="answer1" value=1></button>
-                            <br>
-                            <button class="button" id="answer2" value=2></button>
-                            <br>
-                            <button class="button" id="answer3" value=3></button>
-                            <br>
-                            <div id="result"></div>
-                        </div>
-                
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
                 </div>
+                <div class="modal-body">
+                    <div class="modal-text"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Continue</button>
+                </div>
+            </div>
+    
+        </div>
     </div>
-
-    <!-- <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <ul>
-                            <a href="/play.html"><li>Start Game</li></a>
-                            <a href="/01game_crystal.html"><li>Crystal - Level One</li></a>
-                            <a href="/02game_trivia.html"><li>Trivia - Level Two</li></a>
-                            <a href="/03game_hangman.html"><li>Hangman - Level Three</li></a>
-                            <a href="/04game_fight.html"><li>Fight - Level Four</li></a>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-    <div>INSERT TRIVIA GAME HERE</div> -->
-    <!-- <div id="game"></div>-->
-    <!-- <script src="../js/phaser/phaser.min.js"></script>
-    <script src="../js/phaser/main.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <script src="../js/games/trivia-game.js"></script>
 </body>
