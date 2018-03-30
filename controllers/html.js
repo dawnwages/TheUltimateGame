@@ -41,7 +41,7 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/03game_hangman.html"));
         break;
       case "4":
-        res.sendFile(path.join(__dirname, "../public/bossfight.html"));
+        res.sendFile(path.join(__dirname, "../public/04game_fight.html"));
         break;
       default:
         res.sendFile(path.join(__dirname, "../public/play.html"));
