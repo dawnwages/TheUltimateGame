@@ -23,22 +23,22 @@ $(document).ready(function(){
 	
 		let crystalOne = $('<button>')
 			.attr("id","crystal-one")
-			.attr("class","crystalOne")
+			.attr("class","crystal crystalOne")
 			.append("<div class='panel-body'> <img id='crystal-img-one' class='crystalimg' src='images/gem1_blue.png'></div><div id='crystal-caption-one' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalTwo = $('<button>')
 			.attr("id","crystal-two")
-			.attr("class","crystalTwo")
+			.attr("class","crystal crystalTwo")
 			.append("<div class='panel-body'> <img id='crystal-img-two' class='crystalimg' src='images/gem2_green.png'></div><div id='crystal-caption-two' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalThree = $('<button>')
 			.attr("id","crystal-three")
-			.attr("class","crystalThree")
+			.attr("class","crystal crystalThree")
 			.append("<div class='panel-body'> <img id='crystal-img-three' class='crystalimg' src='images/gem3_red.png'></div><div id='crystal-caption-three' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 		let crystalFour = $('<button>')
 			.attr("id","crystal-four")
-			.attr("class","crystalFour")
+			.attr("class","crystal crystalFour")
 			.append("<div class='panel-body'> <img id='crystal-img-four' class='crystalimg' src='images/gem4_white.png'></div><div id='crystal-caption-four' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 	
