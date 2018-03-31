@@ -38,7 +38,7 @@ $(document).ready(function(){
 	
 		let crystalFour = $('<button>')
 			.attr("id","crystal-four")
-			.attr("class","crystal crystalFour")
+			.attr("class","crystal  crystalFour")
 			.append("<div class='panel-body'> <img id='crystal-img-four' class='crystalimg' src='images/gem4_white.png'></div><div id='crystal-caption-four' class='caption'><h6>Rutilated Quartz Point</h6></div>");
 	
 	
@@ -170,12 +170,29 @@ $(document).ready(function(){
 		}
 		else if ( userNumber == randoNumber){
 			alert("Winner Winner Chicken Dinner!");
-			totalWins = totalWins +1;
-			totalRounds = totalRounds +1;
-			startGame();
+			$(".modal-title").text("Crystal Collector");
+			$(".modal-text").text("congratulations! We're ready to meet the troll!");
+			$("#game-modal").modal();
+			//totalWins = totalWins +1;
+			//totalRounds = totalRounds +1;
+			//startGame();
+			var userId = location.search.split("=") || [0, 1];
+				userId = userId[1];
+				var link = "/lvl/1?ch=1";
+				function redirectLink() {
+					if(userId) {
+						window.location.href = "/lvl/2?ch="+userId;
+					} else {
+						window.location.href = link;
+					}
+				};
+				redirectLink();
 		}
 		else{
 			alert("You've gone over!");
+			$(".modal-title").text("Crystal Collector");
+			$(".modal-text").text("Oh no, you've gone over. You'll need to get the correct combination in order to beat the troll.");
+			$("#game-modal").modal();
 			totalRounds = totalRounds +1;
 			totalLosses = totalLosses +1;
 			console.log(totalLosses);

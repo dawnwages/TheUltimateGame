@@ -96,6 +96,7 @@ function startTrivia() {
 
 function rightAnswer(){
   clearTimeout(timeIsUp);
+  console.log(timeIsUp + "line 99");
   right++;
   questionTimer.stop();
   questionTimer.reset();
@@ -103,8 +104,9 @@ function rightAnswer(){
   $("#questions").html("<h3>Correct!</h3>");
   $('#answer0, #answer1, #answer2, #answer3').hide().off('click');
   $('#result').show().html("You have chosen... Wisely! You will now advance to the next question.");
-
+  console.log(timeIsUp + "line 107");
   timeIsUp = setTimeout(advance, 8 * 1000);
+  console.log(timeIsUp + "line 109");
 }
 
 function wrongAnswer() {
