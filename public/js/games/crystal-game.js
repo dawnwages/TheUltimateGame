@@ -10,7 +10,52 @@ $(document).ready(function(){
 		}
 	});
 
+
+	var user = {};
+	function getUserStats() {
+	  if (userId) {
+		$.get("/api/character/" + userId)
+		  .then(function (response) {
+			console.log(response[0]);
+			user = {
+			  char_name: response[0].char_name,
+			  hp: response[0].hp,
+			  attack: response[0].attack,
+			  coins: response[0].coins,
+			  sprite: `../images/${response[0].sprite}.png`
+			}
+			renderImage();
+			renderHP();
+			renderPotions();
+		  });
+	  } else {
+		user = {
+		  char_name: "Our Hero",
+		  hp: 100,
+		  attack: 20,
+		  coins: 10,
+		  sprite: "https://i.redd.it/ob52245zficy.gif"
+		}
+		renderImage();
+		renderHP();
+		renderPotions();
+	  }
+	}
+	getUserStats();
+
+
 	function genGame(){
+
+		function firstModal() {
+			$(".modal-title").text("Crystal Collector");
+			$(".modal-text").text("You're on your way to save your friend. The villain is evil and could be doing anything to your bud. A true sadist. You must go on a journey to find them in the Kingdom on Naanjibar. You'll have to cross a formidable bridge with an even more formidable genius troll underneath. No one has ever beat his truly tricky questions in order to pass. But you can! The only hope is going to the local sorcerer and creating the best crystal combination to give you special intelligent powers. It will help you pass the test, cross the bridge and save your friend.");
+			$(".modal-text").append("<img src='/images/gem3_red.png'></img>");
+			userImage = $("<img>").attr("src", user.sprite);
+			$(".modal-text").append(userImage);
+			$("#game-modal").modal();
+		}
+		firstModal();
+	
 		
 		let randoNumber = $('<section>')
 			.attr("class", "randomNumber")
@@ -169,7 +214,7 @@ $(document).ready(function(){
 			return;
 		}
 		else if ( userNumber == randoNumber){
-			alert("Winner Winner Chicken Dinner!");
+			
 			$(".modal-title").text("Crystal Collector");
 			$(".modal-text").text("congratulations! We're ready to meet the troll!");
 			$("#game-modal").modal();
@@ -189,9 +234,12 @@ $(document).ready(function(){
 				redirectLink();
 		}
 		else{
-			alert("You've gone over!");
+			
 			$(".modal-title").text("Crystal Collector");
 			$(".modal-text").text("Oh no, you've gone over. You'll need to get the correct combination in order to beat the troll.");
+			$(".modal-text").append("<img src='/images/gem3_red.png'></img>");
+			userImage = $("<img>").attr("src", user.sprite);
+			$(".modal-text").append(userImage);
 			$("#game-modal").modal();
 			totalRounds = totalRounds +1;
 			totalLosses = totalLosses +1;
