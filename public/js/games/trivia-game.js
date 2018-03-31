@@ -145,7 +145,16 @@ function endScreen() {
     $("#game-modal").modal();
   } else {
     $(".modal-text").html("Your Results <br><br>Right: " + right + "<br>Wrong: " + wrong + "<br>Unanswered: " + unanswered);
-    $(document).on("click", "#continue", startTrivia);
+    function redirectLink() {
+      if(userId) {
+        window.location.href = "/lvl/3?ch="+userId;
+      } else {
+        window.location.href = link;
+      }
+    };
+    //redirectLink();
+    
+    $(document).on("click", "#continue", redirectLink);
     $("#game-modal").modal();
   }
   
