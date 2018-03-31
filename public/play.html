@@ -15,30 +15,37 @@
     </style>
 </head>
 <body>
-        <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                            <ul>
-                                    <li>
-                                        <a href="/lvl/4">Level Four</a>
-                                    </li>
-                                    <li>
-                                        <a href="/lvl/3">Level Three</a>
-                                    </li>
-                                    <li>
-                                        <a href="/lvl/2">Level Two</a>
-                                    </li>
-                                    <li>
-                                        <a href="/lvl/1">Level One</a>
-                                    </li>
-                                    <li>
-                                        <a  class="active" href="/play">Start Game</a>
-                                    </li>
-                                </ul>
-                    </div>
+    <!--******************** nav header ********************* -->
+    <nav class="navBG" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+    
+                <div class="mainTitle">
+                    <h1>THE ULTIMATE GAME</h1>
                 </div>
-            </nav>
-    <div>TEST TEST TEST</div>
+            </div>
+            <header>
+                <ul>
+                    <li>
+    
+                        <a class="nav-links" href="/lvl/4">Level Four</a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/lvl/3">Level Three</a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/lvl/2">Level Two</a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/lvl/1">Level One</a>
+                    </li>
+                    <li>
+                        <a class="nav-links active" href="/play">Start Game</a>
+    
+                    </li>
+                </ul>
+            </header>
+    </nav>
     <div id="game"></div>
     <hr>
     <div class="container">
@@ -47,4 +54,6 @@
     <hr>
     <script src="js/phaser/phaser.min.js"></script>
     <script src="js/phaser/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/games/play.js"></script>
 </body>
