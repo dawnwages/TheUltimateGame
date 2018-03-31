@@ -7,51 +7,39 @@
     <link href="../stylesheets/game-style.css" rel="stylesheet">
     <link href="../stylesheets/style.css" rel="stylesheet">
       <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--<style>
-        canvas {
-            margin: 0 auto;
-        }
-    </style>-->
+
 </head>
 <body>
-        <nav class="navBG navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                    </div>
+    <nav class="navBG" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+    
+                <div class="mainTitle">
+                    <h1>THE ULTIMATE GAME</h1>
                 </div>
-            </nav>
-    <div>INSERT HANGMAN GAME HERE</div>
-    <div class="container">
-        <div class="row center">
-            <div id="hangmangame" class="bgTest"></div>
-        </div>
-    </div>
-    <!--<script src="js/phaser/phaser.min.js"></script>
-    <script src="js/phaser/main.js"></script>-->
-    <script src="../js/games/hangman-game.js"></script>
-</body>
             </div>
             <header>
                 <ul>
-                                    <a class="nav-links" id="link-lvl4" href="/lvl/4">Level Four</a>
-                                </li>
-                                <li>
-                                    <a class="nav-links" id="link-lvl3" class="active" href="/lvl/3">Level Three</a>
-                                </li>
-                                <li>
-                                    <a class="nav-links" id="link-lvl2"  href="/lvl/2">Level Two</a>
-                                </li>
-                                <li>
-                                    <a class="nav-links" id="link-lvl1" href="/lvl/1">Level One</a>
-                                </li>
-                                <li>
-                                    <a class="nav-links" id="link-lvl0" href="/lvl/0">Start Game</a>
-                                </li>
+                    <li>
+                        <a class="nav-links" href="/lvl/4">Level Four</a>
+                    </li>
+                    <li>
+                        <a class="active nav-links" href="/lvl/3">Level Three</a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/lvl/2">Level Two</a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/lvl/1">Level One</a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/play">Start Game</a>
+                    </li>
                 </ul>
             </header>
     </nav>
+
     <div class="container">
         <div class="row center">
             <div id="hangmangame"></div>
@@ -77,6 +65,8 @@
     
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <script src="../js/games/hangman-game.js"></script>
 </body>
