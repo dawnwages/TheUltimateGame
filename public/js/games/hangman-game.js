@@ -13,7 +13,6 @@ $(document).ready(function(){
 			
 			let userText = $('<span>')
 				.attr("id","user-text")
-				.text("this is the user text");
 
 			let genButton = $('<button>')
 				.attr("id","generatePick")
@@ -28,32 +27,38 @@ $(document).ready(function(){
 			let winCount = $('<div>')
 				.attr("id","Winner")
 				.attr("class","row")
+				.attr("class", "hm-item")
 				.text("this is where we count your wins");
 
 			let successText = $('<span>')
 				.attr("id", "successText")
 				.attr("class","row")
+				.attr("class", "hm-item")
 				.text("success text");
 			
 			let messagePick = $('<span>')
 				.attr("id", "messagePick")
 				.attr("class","row")
+				.attr("class", "hm-item")
 				.text("messagePick");
 
 			let hangWord = $('<span>')
 				.attr("id", "Hangman")
 				.attr("class","row")
+				.attr("class", "hm-item")
 				.text("hangman word");
 
 			let badGuesses = $('<span>')
 				.attr("id", "badGuess")
 				.attr("class","row")
+				.attr("class", "hm-item")
 				.text("bad guesses");
 
 			let guessesLeft = $('<span>')
-				.attr("id", "badGuess")
+				.attr("id", "remainingGuesses")
 				.attr("class","row")
-				.text("guesses Left");
+				.attr("class", "hm-item")
+				.text("guesses Left: ");
 			
 				// let userGuess = $('<section>')
 			// 	.attr("id", "user-number")
