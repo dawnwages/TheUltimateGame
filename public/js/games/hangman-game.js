@@ -349,17 +349,37 @@ function generatePick(){
 					};
 
 				if (totalGuesses < 0){
-					alert("Sorry, you've ran out of guesses. The answer was: "+ computerPick);
+					$(".modal-title").text("Hangman");
+					$(".modal-text").text("You've ran out of guesses"+ computerPick);
+					$("#game-modal").modal();
+					//alert("Sorry, you've ran out of guesses. The answer was: "+ computerPick);
 					clearPick();	
 				}
 
 				if (emptyCharacters - spaceCounter == totalCharSuccess){
-					alert("you've won!");
+					$(".modal-title").text("Hangman");
+					$(".modal-text").text("You've won!");
+					var userId = location.search.split("=") || [0, 1];
+					userId = userId[1];
+					var link = "/lvl/1?ch=1";
+					function redirectLink() {
+						if(userId) {
+						  window.location.href = "/lvl/4?ch="+userId;
+						} else {
+						  window.location.href = link;
+						}
+					  };
+					  //redirectLink();
+					  
+					  $(document).on("click", "#continue", redirectLink);
+					  $("#game-modal").modal();
+					//alert("you've won!");
 					userWins = userWins +1;
 					console.log("Youve Won "+ userWins+" times");
 					console.log(emptyCharacters - spaceCounter == totalCharSuccess);
 							function successText() {
-								document.querySelector("#successText").innerHTML =  computerPick;
+								$("#successText").text(computerPick);
+								//document.querySelector("#successText").innerHTML =  computerPick;
 							}
 
 							successText();
