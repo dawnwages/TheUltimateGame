@@ -47,7 +47,7 @@ $(document).ready(function () {
       }).then(function (data) {
         console.log(data);
 
-        window.location.href = "/play?ch="+playerId;
+        window.location.href = "/play?ch=" + playerId;
 
 
       }).catch(function (err) {
