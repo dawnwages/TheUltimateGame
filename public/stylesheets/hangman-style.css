@@ -1,0 +1,41 @@
+/* ============================  TRIVIA GAME  ========================== */
+
+h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color: black;
+    /* background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    width: 300px;
+      padding: 10px;
+    margin-left: 34.375%; */
+}
+
+.bgTest {
+    background-image: url(../images/pixelated_bg3.gif);
+    /* background-image: url(../images/dust_scratches.png); */
+    height: 600px;
+    width: 960px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: none;
+    /* Positioning */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hm-item {
+    background-color: white;
+    padding: 10px;
+    box-shadow: black, 2px;
+    border-radius: 20px;
+}
+
+.hm-item div {
+    background-color: white;
+    padding: 10px;
+    box-shadow: black, 2px;
+    border-radius: 20px;
+    width: 20px;
+    margin: auto;
+}
