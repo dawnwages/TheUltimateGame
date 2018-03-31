@@ -96,17 +96,16 @@ function startTrivia() {
 
 function rightAnswer(){
   clearTimeout(timeIsUp);
-  console.log(timeIsUp + "line 99");
   right++;
   questionTimer.stop();
   questionTimer.reset();
+  timeIsUp = 0;
   $("#time").empty();
   $("#questions").html("<h3>Correct!</h3>");
   $('#answer0, #answer1, #answer2, #answer3').hide().off('click');
   $('#result').show().html("You have chosen... Wisely! You will now advance to the next question.");
-  console.log(timeIsUp + "line 107");
-  timeIsUp = setTimeout(advance, 8 * 1000);
-  console.log(timeIsUp + "line 109");
+
+  timeIsUp = setTimeout(advance, 1 * 1000);
 }
 
 function wrongAnswer() {
@@ -114,12 +113,13 @@ function wrongAnswer() {
   wrong++;
   questionTimer.stop();
   questionTimer.reset();
+  timeIstUp = 0;
   $("#time").empty();
   $("#questions").html("<h3>Incorrect!</h3>");
   $('#answer0, #answer1, #answer2, #answer3').hide().off('click');
   $('#result').show().html("You have chosen... Poorly! You have lost a life, prepare for the next question.");
 
-  timeIsUp = setTimeout(advance, 8 * 1000);
+  timeIsUp = setTimeout(advance, 1 * 1000);
 }
 
 function timesUp() {
@@ -127,7 +127,7 @@ function timesUp() {
   unanswered++;
   questionTimer.stop();
   questionTimer.reset();
-  $("#time").empty();
+ // $("#time").empty();
   $("#question").html("<h2>Time's Up!</h2>");
   $('#answer0, #answer1, #answer2, #answer3').hide().off('click');
   $('#result').show().html("Your time is up! you have lost a life, prepare for the next question.");
@@ -137,9 +137,29 @@ function timesUp() {
 
 function endScreen() {
   $("#time").html("<h2>Great job!</h2>");
-  $("#questions").html("Your Results <br><br>Right: " + right + "<br>Wrong: " + wrong + "<br>Unanswered: " + unanswered);
 
-  $("#result").html("<button class='button' id='advance'>Advance to the next level!</button>");
+  if (right < qArray.length ) {
+   // alert("you have not guessed them all right");
+    $(".modal-text").html("Your Results <br><br>Right: " + right + "<br>Wrong: " + wrong + "<br>Unanswered: " + unanswered);
+    $(document).on("click", "#continue", startTrivia);
+    $("#game-modal").modal();
+  } else {
+    $(".modal-text").html("Your Results <br><br>Right: " + right + "<br>Wrong: " + wrong + "<br>Unanswered: " + unanswered);
+    function redirectLink() {
+      if(userId) {
+        window.location.href = "/lvl/3?ch="+userId;
+      } else {
+        window.location.href = link;
+      }
+    };
+    //redirectLink();
+    
+    $(document).on("click", "#continue", redirectLink);
+    $("#game-modal").modal();
+  }
+  
+
+ // $("#result").html("<button class='button' id='advance'>Advance to the next level!</button>");
 
   $("#advance").on("click", function() {
     startTrivia();
