@@ -13,9 +13,15 @@ $(document).ready(function () {
         else {
           console.log(response)
           response.forEach(v => {
-            console.log(v.char_name)
+            var url;
+            if (v.lvl_comp >= 1){
+              url = "/lvl/" + v.lvl_comp + "?ch=" + v.id;
+            }
+            else if (v.lvl_comp === 0) {
+              url = "/play?ch=" + v.id;
+            }
             $("#current-characters").append($("<a>")
-            .attr("href", "/lvl/" + v.lvl_comp + "?ch=" + v.id).append($("<button>")
+            .attr("href", url).append($("<button>")
               .attr("character_id", v.id)
               .attr("class", "created-characters btn btn-default")
                 .text("Continue as " + v.char_name)));
