@@ -29,7 +29,7 @@ module.exports = function(app) {
   });
 
 
-  app.get("/lvl/:id", function (req, res) {
+  app.get("/lvl/:id", isAuthenticated, function(req, res) {
     switch (req.params.id) {
       case "0":
         res.sendFile(path.join(__dirname, "../public/play.html"));
