@@ -11,6 +11,12 @@ $(document).ready(function() {
     }
   });
 
+  function showOpeningModal(){
+    $(".modal-title").text("Medieval Web Dev Trivia");
+    $(".modal-text").text("How sinister! You've made it to the troll, but the tables have turned. You're going to be tested about your Web Development knowledge by the troll. YES! The Technology from the FUTURE!");
+    $("#game-modal").modal("toggle");
+  }
+
   var qArray;
   var right;
   var wrong;
@@ -179,5 +185,5 @@ function advance() {
 }
 
 startTrivia();
-
+showOpeningModal();
 });
